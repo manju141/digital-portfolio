@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>web</title>
+        <style>
+            body{
+                font-family: Arial,sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: antiquewhite;
+            }
+
+            header{
+                background-color: #383535;
+                color: beige;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative;
+            }
+            .head-content h1{
+                    font-size: 2.5rem;
+            }
+
+            .profile-picture
+            {
+                width: 100px;
+                height: 100px;
+                border-radius: 75%;
+                object-fit: cover;
+                position: absolute;
+                top:7px;
+                left: 75px;
+            }
+
+            nav{
+                background-color: #383535;
+                color:#fff;
+                text-align: center;
+            }
+
+            nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+
+            nav ul li{
+                display:inline;
+                margin:0 20px;
+            }
+
+            nav ul li a{
+                text-decoration: none;
+                color:#fff;
+            }
+
+
+            .section-content{
+                background-color: lightgrey;
+                padding:2rem;
+                margin:1rem;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            .download-button{
+                background-color: #333;
+                color:#fff;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 20px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+
+            .download-button:hover{
+                background-color: #555;
+            }
+
+            footer{
+                text-align: center;
+                padding:1rem 0;
+                background-color: #333;
+                color:#fff;
+            }
+
+            ul{
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+        </style>
+    </head>
+   <body>
+    <header>
+        <div class="header-content">
+            <img src="logoo.jpg" alt="my pic" class="profile-picture">
+            <h1>R.Manju</h1>
+            <p>self learner</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="about">About</a></li>
+            <li><a href="Education">Education</a></li>
+            <li><a href="Skills">Skills</a></li>
+            <li><a href="Projects">projects</a></li>
+            <li><a href="resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>Hello Everyone,I am R.Manju,student of Rani Anna Government college </p>
+        </div>
+    </section>
+
+    <section id="Education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>studing B.sc computer science and also self learner </p>
+        </div>
+    </section>
+
+    <section id="Skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+            <li>c developer</li>
+            <li>java developer</li>
+            <li>c++ developer</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="Projects">
+        <div class="section-content">
+            <h2>projects</h2>
+        <ul>
+            <li><a href="#">Project1</a></li>
+          <li><a href="#">Project2</a></li></ul>
+        </div>
+    </section>
+
+    
+    <section id="Resume">
+        <center>
+        <div class="section-content">
+            <h2>Resume</h2>
+            <a href="" class="download-button">download cv</a>
+        </div>
+    </center>
+    </section>
+    <footer>
+        <p>&copy; manju</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click',function(e){
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if(targetElement){
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+    </script>
+   </body>
+</html>
